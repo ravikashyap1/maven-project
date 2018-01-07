@@ -6,11 +6,6 @@ pipeline {
 			steps {
 				build job: 'First-Maven-Project'
 			}
-			post {
-				success {
-					archiveArtifacts artifacts: '**/target/*.war'
-				}
-			}
 		}
 
 		stage('Deploy'){
